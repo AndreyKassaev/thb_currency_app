@@ -19,11 +19,13 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import ru.thbank.thb_currency_app.R
+import ru.thbank.thb_currency_app.domain.MainState
 import ru.thbank.thb_currency_app.ui.theme.ForestGreen
 
 class TopAppBar(val viewModel: MainViewModel) {
     @Composable
     fun execute(){
+
         val currentTime = viewModel.currentTime.collectAsState().value
         val currentDate = viewModel.currentDate.collectAsState().value
 

@@ -8,7 +8,7 @@ import java.util.Date
 
 class GetCurrentDateUseCase {
     fun execute(): Flow<String> = flow {
-        val sdf = SimpleDateFormat("dd-MM-yyyy")
+        val sdf = SimpleDateFormat("dd.MM.yyyy")
         while(true){
             emit(sdf.format(Date()))
             delay(1000L*60*60)

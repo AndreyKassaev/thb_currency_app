@@ -1,5 +1,6 @@
 package ru.thbank.thb_currency_app.ui
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
@@ -8,14 +9,16 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 import ru.thbank.thb_currency_app.data.CurrencyRepository
 import ru.thbank.thb_currency_app.domain.CurrencyEntity
-import ru.thbank.thb_currency_app.domain.GetAllCurrencyDataFlowUseCase
 import ru.thbank.thb_currency_app.domain.GetCurrentDateUseCase
 import ru.thbank.thb_currency_app.domain.GetCurrentTimeUseCase
+import ru.thbank.thb_currency_app.domain.GetMainStateUseCase
+import ru.thbank.thb_currency_app.domain.MainState
+import java.lang.Exception
 
 class MainViewModel(
-    val getAllCurrencyDataFlowUseCase: GetAllCurrencyDataFlowUseCase,
     val getCurrentTimeUseCase: GetCurrentTimeUseCase,
-    val getCurrentDateUseCase: GetCurrentDateUseCase
+    val getCurrentDateUseCase: GetCurrentDateUseCase,
+    val getMainStateUseCase: GetMainStateUseCase
     ): ViewModel() {
 
     private val defaultCurrencyList = listOf(
@@ -24,22 +27,24 @@ class MainViewModel(
         CurrencyEntity.GBP(buyPrice = "100", sellPrice = "100")
     )
 
-    private val _currencyListFlow: MutableStateFlow<List<CurrencyEntity>> = MutableStateFlow(this.defaultCurrencyList)
-    val currencyListFlow: StateFlow<List<CurrencyEntity>> = _currencyListFlow
+    private val defaultMainState = MainState.Loading
+
+    private val _mainState: MutableStateFlow<MainState> = MutableStateFlow(this.defaultMainState)
+    val mainState: StateFlow<MainState> = _mainState
 
     val currentTime: MutableStateFlow<String> = MutableStateFlow("13:13:13")
     val currentDate: MutableStateFlow<String> = MutableStateFlow("11.11.2013")
 
     init {
-        this.getCurrencyDataFlow()
+        this.getMainState()
         this.whatTimeIsIt()
         this.whatDateIsIt()
     }
 
-    private fun getCurrencyDataFlow(){
+    private fun getMainState(){
         viewModelScope.launch {
-            getAllCurrencyDataFlowUseCase.execute().collect{
-                _currencyListFlow.value = it
+            getMainStateUseCase.execute().collect{
+                _mainState.value = it
             }
         }
     }
@@ -58,14 +63,14 @@ class MainViewModel(
         val Factory: ViewModelProvider.Factory = object : ViewModelProvider.Factory {
             override fun <T : ViewModel> create(modelClass: Class<T>): T {
                 val repository = CurrencyRepository()
-                val getAllCurrencyDataFlowUseCase = GetAllCurrencyDataFlowUseCase(repository = repository)
                 val getCurrentTimeUseCase = GetCurrentTimeUseCase()
                 val getCurrentDateUseCase = GetCurrentDateUseCase()
+                val getMainStateUseCase = GetMainStateUseCase(repository = repository)
 
                 return MainViewModel(
-                    getAllCurrencyDataFlowUseCase = getAllCurrencyDataFlowUseCase,
                     getCurrentTimeUseCase = getCurrentTimeUseCase,
-                    getCurrentDateUseCase = getCurrentDateUseCase
+                    getCurrentDateUseCase = getCurrentDateUseCase,
+                    getMainStateUseCase = getMainStateUseCase
                 ) as T
             }
         }

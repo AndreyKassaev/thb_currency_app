@@ -22,30 +22,52 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import ru.thbank.thb_currency_app.R
 import ru.thbank.thb_currency_app.domain.CurrencyEntity
+import ru.thbank.thb_currency_app.domain.MainState
 import ru.thbank.thb_currency_app.ui.theme.ForestGreen
 import ru.thbank.thb_currency_app.ui.theme.ForestGreenWithOpacity
+import java.lang.Error
 
 class CurrencyList(val viewModel: MainViewModel) {
+    
+    lateinit var USD: CurrencyEntity.USD
+    lateinit var EUR: CurrencyEntity.EUR
+    lateinit var GBP: CurrencyEntity.GBP
+    
     @Composable
     fun execute(){
-//        val currencyList = viewModel.currencyList.value
-        val currencyList = viewModel.currencyListFlow.collectAsState().value
-        lateinit var USD: CurrencyEntity.USD
-        lateinit var EUR: CurrencyEntity.EUR
-        lateinit var GBP: CurrencyEntity.GBP
+//        val currencyList = viewModel.currencyListFlow.collectAsState().value
+        val mainState = viewModel.mainState.collectAsState().value
 
-        if (currencyList != null) {
-            for (currency in currencyList){
-                when(currency){
-                    is CurrencyEntity.USD -> {
-                        USD = currency
-                    }
-                    is CurrencyEntity.EUR -> {
-                        EUR = currency
-                    }
-                    is CurrencyEntity.GBP -> {
-                        GBP = currency
-                    }
+
+
+        when(mainState){
+            is MainState.Success -> {
+                Success(currencyList = mainState.CurrencyList)
+            }
+            is MainState.Loading -> {
+
+            }
+            is MainState.Error -> {
+
+            }
+        }
+
+        
+    }
+
+    
+    @Composable
+    fun Success(currencyList: List<CurrencyEntity>){
+        for (currency in currencyList){
+            when(currency){
+                is CurrencyEntity.USD -> {
+                    USD = currency
+                }
+                is CurrencyEntity.EUR -> {
+                    EUR = currency
+                }
+                is CurrencyEntity.GBP -> {
+                    GBP = currency
                 }
             }
         }
