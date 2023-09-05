@@ -39,7 +39,7 @@ class CurrencyBuySell {
                 Text(
                     text = "Валюта",
                     color = ForestGreen,
-                    fontSize = 54.sp,
+                    fontSize = 34.sp,
                     fontWeight = FontWeight.SemiBold
                 )
             }
@@ -52,7 +52,7 @@ class CurrencyBuySell {
                 Text(
                     text = "Покупка",
                     color = ForestGreen,
-                    fontSize = 54.sp,
+                    fontSize = 34.sp,
                     fontWeight = FontWeight.SemiBold
                 )
             }
@@ -65,7 +65,7 @@ class CurrencyBuySell {
                 Text(
                     text = "Продажа",
                     color = ForestGreen,
-                    fontSize = 54.sp,
+                    fontSize = 34.sp,
                     fontWeight = FontWeight.SemiBold
                 )
             }

@@ -122,13 +122,13 @@ class CurrencyList(val viewModel: MainViewModel) {
                                 Text(
                                     text = "Доллар США",
                                     color = ForestGreen,
-                                    fontSize = 54.sp,
+                                    fontSize = 24.sp,
                                     fontWeight = FontWeight.Medium
                                 )
                                 Text(
                                     text = "USD",
                                     color = ForestGreen,
-                                    fontSize = 54.sp,
+                                    fontSize = 32.sp,
                                     fontWeight = FontWeight.Bold,
                                 )
                             }
@@ -208,13 +208,13 @@ class CurrencyList(val viewModel: MainViewModel) {
                                 Text(
                                     text = "Евро",
                                     color = ForestGreen,
-                                    fontSize = 54.sp,
+                                    fontSize = 34.sp,
                                     fontWeight = FontWeight.Medium
                                 )
                                 Text(
                                     text = "EUR",
                                     color = ForestGreen,
-                                    fontSize = 54.sp,
+                                    fontSize = 32.sp,
                                     fontWeight = FontWeight.Bold,
                                 )
                             }
@@ -298,13 +298,13 @@ class CurrencyList(val viewModel: MainViewModel) {
                                 Text(
                                     text = "Фунт стерлингов",
                                     color = ForestGreen,
-                                    fontSize = 42.sp,
+                                    fontSize = 22.sp,
                                     fontWeight = FontWeight.Medium
                                 )
                                 Text(
                                     text = "GBP",
                                     color = ForestGreen,
-                                    fontSize = 54.sp,
+                                    fontSize = 32.sp,
                                     fontWeight = FontWeight.Bold,
                                 )
                             }

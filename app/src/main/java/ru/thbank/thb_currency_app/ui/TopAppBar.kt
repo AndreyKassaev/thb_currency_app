@@ -64,7 +64,7 @@ class TopAppBar(val viewModel: MainViewModel) {
                 Text(
                     text = "КУРСЫ ВАЛЮТ",
                     color = Color.White,
-                    fontSize = 54.sp,
+                    fontSize = 34.sp,
                     fontWeight = FontWeight.Bold,
                 )
             }
@@ -81,12 +81,12 @@ class TopAppBar(val viewModel: MainViewModel) {
                     Text(
                         text = currentDate,
                         color = Color.White,
-                        fontSize = 54.sp
+                        fontSize = 34.sp
                     )
                     Text(
                         text = currentTime,
                         color = Color.White,
-                        fontSize = 54.sp,
+                        fontSize = 34.sp,
                         fontWeight = FontWeight.Black
                     )
                 }
