@@ -12,6 +12,7 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import ru.thbank.thb_currency_app.ui.theme.ForestGreen
+import ru.thbank.thb_currency_app.ui.theme.montserratFamily
 
 class CurrencyBuySell {
     @Composable
@@ -40,7 +41,8 @@ class CurrencyBuySell {
                     text = "Валюта",
                     color = ForestGreen,
                     fontSize = 34.sp,
-                    fontWeight = FontWeight.SemiBold
+                    fontWeight = FontWeight.Bold,
+                    fontFamily = montserratFamily
                 )
             }
             Box(
@@ -53,7 +55,8 @@ class CurrencyBuySell {
                     text = "Покупка",
                     color = ForestGreen,
                     fontSize = 34.sp,
-                    fontWeight = FontWeight.SemiBold
+                    fontWeight = FontWeight.Bold,
+                    fontFamily = montserratFamily
                 )
             }
             Box(
@@ -66,7 +69,8 @@ class CurrencyBuySell {
                     text = "Продажа",
                     color = ForestGreen,
                     fontSize = 34.sp,
-                    fontWeight = FontWeight.SemiBold
+                    fontWeight = FontWeight.Bold,
+                    fontFamily = montserratFamily
                 )
             }
         }

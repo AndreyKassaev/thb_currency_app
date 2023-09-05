@@ -21,6 +21,7 @@ import androidx.compose.ui.unit.sp
 import ru.thbank.thb_currency_app.R
 import ru.thbank.thb_currency_app.domain.MainState
 import ru.thbank.thb_currency_app.ui.theme.ForestGreen
+import ru.thbank.thb_currency_app.ui.theme.montserratFamily
 
 class TopAppBar(val viewModel: MainViewModel) {
     @Composable
@@ -66,6 +67,7 @@ class TopAppBar(val viewModel: MainViewModel) {
                     color = Color.White,
                     fontSize = 34.sp,
                     fontWeight = FontWeight.Bold,
+                    fontFamily = montserratFamily
                 )
             }
             Box(
@@ -81,13 +83,16 @@ class TopAppBar(val viewModel: MainViewModel) {
                     Text(
                         text = currentDate,
                         color = Color.White,
-                        fontSize = 34.sp
+                        fontSize = 34.sp,
+                        fontWeight = FontWeight.Medium,
+                        fontFamily = montserratFamily
                     )
                     Text(
                         text = currentTime,
                         color = Color.White,
                         fontSize = 34.sp,
-                        fontWeight = FontWeight.Black
+                        fontWeight = FontWeight.Bold,
+                        fontFamily = montserratFamily
                     )
                 }
             }

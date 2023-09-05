@@ -2,11 +2,22 @@ package ru.thbank.thb_currency_app.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
+import ru.thbank.thb_currency_app.R
+
+val montserratFamily = FontFamily(
+    Font(R.font.montserrat_medium, FontWeight.Medium),
+    Font(R.font.montserrat_bold, FontWeight.Bold)
+)
 
 // Set of Material typography styles to start with
+//    val AppTypography = Typography(
+//        bodyMedium = TextStyle(fontFamily = montserratFamily, fontWeight = FontWeight.Bold, fontStyle = FontStyle.Normal)
+//    )
 val Typography = Typography(
     bodyLarge = TextStyle(
         fontFamily = FontFamily.Default,

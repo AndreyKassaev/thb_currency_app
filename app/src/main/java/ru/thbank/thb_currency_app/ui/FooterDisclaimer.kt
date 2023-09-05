@@ -10,8 +10,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import ru.thbank.thb_currency_app.ui.theme.ForestGreen
+import ru.thbank.thb_currency_app.ui.theme.montserratFamily
 
 class FooterDisclaimer {
     @Composable
@@ -27,7 +29,9 @@ class FooterDisclaimer {
                 modifier = Modifier
                     .padding(end = 16.dp),
                 text = "Не является публичной офертой",
-                color = Color.White
+                color = Color.White,
+                fontWeight = FontWeight.Medium,
+                fontFamily = montserratFamily
             )
         }
     }

@@ -25,6 +25,7 @@ import ru.thbank.thb_currency_app.domain.CurrencyEntity
 import ru.thbank.thb_currency_app.domain.MainState
 import ru.thbank.thb_currency_app.ui.theme.ForestGreen
 import ru.thbank.thb_currency_app.ui.theme.ForestGreenWithOpacity
+import ru.thbank.thb_currency_app.ui.theme.montserratFamily
 import java.lang.Error
 
 class CurrencyList(val viewModel: MainViewModel) {
@@ -35,10 +36,7 @@ class CurrencyList(val viewModel: MainViewModel) {
     
     @Composable
     fun execute(){
-//        val currencyList = viewModel.currencyListFlow.collectAsState().value
         val mainState = viewModel.mainState.collectAsState().value
-
-
 
         when(mainState){
             is MainState.Success -> {
@@ -123,13 +121,15 @@ class CurrencyList(val viewModel: MainViewModel) {
                                     text = "Доллар США",
                                     color = ForestGreen,
                                     fontSize = 24.sp,
-                                    fontWeight = FontWeight.Medium
+                                    fontWeight = FontWeight.Medium,
+                                    fontFamily = montserratFamily
                                 )
                                 Text(
                                     text = "USD",
                                     color = ForestGreen,
                                     fontSize = 32.sp,
                                     fontWeight = FontWeight.Bold,
+                                    fontFamily = montserratFamily
                                 )
                             }
                         }
@@ -145,7 +145,8 @@ class CurrencyList(val viewModel: MainViewModel) {
                         text = USD.buyPrice,
                         color = ForestGreen,
                         fontSize = 84.sp,
-                        fontWeight = FontWeight.Bold
+                        fontWeight = FontWeight.Bold,
+                        fontFamily = montserratFamily
                     )
                 }
                 Box(
@@ -158,7 +159,8 @@ class CurrencyList(val viewModel: MainViewModel) {
                         text = USD.sellPrice,
                         color = ForestGreen,
                         fontSize = 84.sp,
-                        fontWeight = FontWeight.Bold
+                        fontWeight = FontWeight.Bold,
+                        fontFamily = montserratFamily
                     )
                 }
             }
@@ -208,14 +210,16 @@ class CurrencyList(val viewModel: MainViewModel) {
                                 Text(
                                     text = "Евро",
                                     color = ForestGreen,
-                                    fontSize = 34.sp,
-                                    fontWeight = FontWeight.Medium
+                                    fontSize = 24.sp,
+                                    fontWeight = FontWeight.Medium,
+                                    fontFamily = montserratFamily
                                 )
                                 Text(
                                     text = "EUR",
                                     color = ForestGreen,
                                     fontSize = 32.sp,
                                     fontWeight = FontWeight.Bold,
+                                    fontFamily = montserratFamily
                                 )
                             }
                         }
@@ -231,7 +235,8 @@ class CurrencyList(val viewModel: MainViewModel) {
                         text = EUR.buyPrice,
                         color = ForestGreen,
                         fontSize = 84.sp,
-                        fontWeight = FontWeight.Bold
+                        fontWeight = FontWeight.Bold,
+                        fontFamily = montserratFamily
                     )
                 }
                 Box(
@@ -244,7 +249,8 @@ class CurrencyList(val viewModel: MainViewModel) {
                         text = EUR.sellPrice,
                         color = ForestGreen,
                         fontSize = 84.sp,
-                        fontWeight = FontWeight.Bold
+                        fontWeight = FontWeight.Bold,
+                        fontFamily = montserratFamily
                     )
                 }
             }
@@ -299,13 +305,15 @@ class CurrencyList(val viewModel: MainViewModel) {
                                     text = "Фунт стерлингов",
                                     color = ForestGreen,
                                     fontSize = 22.sp,
-                                    fontWeight = FontWeight.Medium
+                                    fontWeight = FontWeight.Medium,
+                                    fontFamily = montserratFamily
                                 )
                                 Text(
                                     text = "GBP",
                                     color = ForestGreen,
                                     fontSize = 32.sp,
                                     fontWeight = FontWeight.Bold,
+                                    fontFamily = montserratFamily
                                 )
                             }
                         }
@@ -321,7 +329,8 @@ class CurrencyList(val viewModel: MainViewModel) {
                         text = GBP.buyPrice,
                         color = ForestGreen,
                         fontSize = 84.sp,
-                        fontWeight = FontWeight.Bold
+                        fontWeight = FontWeight.Bold,
+                        fontFamily = montserratFamily
                     )
                 }
                 Box(
@@ -334,7 +343,8 @@ class CurrencyList(val viewModel: MainViewModel) {
                         text = GBP.sellPrice,
                         color = ForestGreen,
                         fontSize = 84.sp,
-                        fontWeight = FontWeight.Bold
+                        fontWeight = FontWeight.Bold,
+                        fontFamily = montserratFamily
                     )
                 }
             }
