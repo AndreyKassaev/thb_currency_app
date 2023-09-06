@@ -26,7 +26,7 @@ import ru.thbank.thb_currency_app.domain.MainState
 import ru.thbank.thb_currency_app.ui.theme.ForestGreen
 import ru.thbank.thb_currency_app.ui.theme.ForestGreenWithOpacity
 import ru.thbank.thb_currency_app.ui.theme.montserratFamily
-import java.lang.Error
+
 
 class CurrencyList(val viewModel: MainViewModel) {
     
@@ -100,7 +100,7 @@ class CurrencyList(val viewModel: MainViewModel) {
                         )
                         {
                             Image(
-                                painterResource(id = R.drawable.usd),
+                                painterResource(id = R.drawable.usa_svg),
                                 contentDescription = "USA",
                                 modifier = Modifier
                                     .fillMaxSize()
@@ -192,7 +192,7 @@ class CurrencyList(val viewModel: MainViewModel) {
                             .weight(1F),
                             contentAlignment = Alignment.Center){
                             Image(
-                                painterResource(id = R.drawable.eur),
+                                painterResource(id = R.drawable.eu_svg),
                                 contentDescription = "EUR",
                                 modifier = Modifier
                                     .fillMaxSize()
@@ -284,7 +284,7 @@ class CurrencyList(val viewModel: MainViewModel) {
                             contentAlignment = Alignment.Center
                         ){
                             Image(
-                                painterResource(id = R.drawable.gbp),
+                                painterResource(id = R.drawable.gb_svg),
                                 contentDescription = "GBP",
                                 modifier = Modifier
                                     .fillMaxSize()
