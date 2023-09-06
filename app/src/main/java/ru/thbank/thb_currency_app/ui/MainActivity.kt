@@ -77,7 +77,7 @@ class MainActivity : ComponentActivity() {
     @Composable
     fun Loading(){
         Image(
-            painterResource(id = R.drawable.thb_logo_image),
+            painterResource(id = R.drawable.logo),
             contentDescription = "Thbank logo",
             modifier = Modifier
                 .fillMaxSize(1f)
@@ -87,7 +87,7 @@ class MainActivity : ComponentActivity() {
     @Composable
     fun Error(){
         Image(
-            painterResource(id = R.drawable.thb_logo_image),
+            painterResource(id = R.drawable.logo),
             contentDescription = "Thbank logo",
             modifier = Modifier
                 .fillMaxSize(1f)

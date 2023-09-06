@@ -50,7 +50,7 @@ class TopAppBar(val viewModel: MainViewModel) {
                 contentAlignment = Alignment.Center
             ){
                 Image(
-                    painterResource(id = R.drawable.thb_logo_image),
+                    painterResource(id = R.drawable.logo),
                     contentDescription = "Thbank logo",
                     modifier = Modifier
                         .fillMaxSize(1f)
