@@ -18,6 +18,7 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import ru.thbank.thb_currency_app.R
@@ -84,8 +85,14 @@ class CurrencyList(val viewModel: MainViewModel) {
                             drawContent()
                             drawLine(
                                 color = ForestGreen,
-                                start = Offset(size.width, 0f),
-                                end = Offset(size.width, size.height),
+                                start = Offset(
+                                    size.width,
+                                    0f
+                                ),
+                                end = Offset(
+                                    size.width,
+                                    size.height
+                                ),
                                 strokeWidth = 3f
                             )
                         },
@@ -146,7 +153,8 @@ class CurrencyList(val viewModel: MainViewModel) {
                         color = ForestGreen,
                         fontSize = 84.sp,
                         fontWeight = FontWeight.Bold,
-                        fontFamily = montserratFamily
+                        fontFamily = montserratFamily,
+                        textAlign = TextAlign.Center
                     )
                 }
                 Box(
@@ -160,7 +168,8 @@ class CurrencyList(val viewModel: MainViewModel) {
                         color = ForestGreen,
                         fontSize = 84.sp,
                         fontWeight = FontWeight.Bold,
-                        fontFamily = montserratFamily
+                        fontFamily = montserratFamily,
+                        textAlign = TextAlign.Center
                     )
                 }
             }
@@ -178,8 +187,14 @@ class CurrencyList(val viewModel: MainViewModel) {
                             drawContent()
                             drawLine(
                                 color = ForestGreen,
-                                start = Offset(size.width, 0f),
-                                end = Offset(size.width, size.height),
+                                start = Offset(
+                                    size.width,
+                                    0f
+                                ),
+                                end = Offset(
+                                    size.width,
+                                    size.height
+                                ),
                                 strokeWidth = 3f
                             )
                         },
@@ -236,7 +251,8 @@ class CurrencyList(val viewModel: MainViewModel) {
                         color = ForestGreen,
                         fontSize = 84.sp,
                         fontWeight = FontWeight.Bold,
-                        fontFamily = montserratFamily
+                        fontFamily = montserratFamily,
+                        textAlign = TextAlign.Center
                     )
                 }
                 Box(
@@ -250,7 +266,8 @@ class CurrencyList(val viewModel: MainViewModel) {
                         color = ForestGreen,
                         fontSize = 84.sp,
                         fontWeight = FontWeight.Bold,
-                        fontFamily = montserratFamily
+                        fontFamily = montserratFamily,
+                        textAlign = TextAlign.Center
                     )
                 }
             }
@@ -268,8 +285,14 @@ class CurrencyList(val viewModel: MainViewModel) {
                             drawContent()
                             drawLine(
                                 color = ForestGreen,
-                                start = Offset(size.width, 0f),
-                                end = Offset(size.width, size.height),
+                                start = Offset(
+                                    size.width,
+                                    0f
+                                ),
+                                end = Offset(
+                                    size.width,
+                                    size.height
+                                ),
                                 strokeWidth = 3f
                             )
                         },
@@ -304,9 +327,10 @@ class CurrencyList(val viewModel: MainViewModel) {
                                 Text(
                                     text = "Фунт стерлингов",
                                     color = ForestGreen,
-                                    fontSize = 22.sp,
+                                    fontSize = 18.sp,
                                     fontWeight = FontWeight.Medium,
-                                    fontFamily = montserratFamily
+                                    fontFamily = montserratFamily,
+                                    textAlign = TextAlign.Center
                                 )
                                 Text(
                                     text = "GBP",
@@ -330,7 +354,8 @@ class CurrencyList(val viewModel: MainViewModel) {
                         color = ForestGreen,
                         fontSize = 84.sp,
                         fontWeight = FontWeight.Bold,
-                        fontFamily = montserratFamily
+                        fontFamily = montserratFamily,
+                        textAlign = TextAlign.Center
                     )
                 }
                 Box(
@@ -344,7 +369,8 @@ class CurrencyList(val viewModel: MainViewModel) {
                         color = ForestGreen,
                         fontSize = 84.sp,
                         fontWeight = FontWeight.Bold,
-                        fontFamily = montserratFamily
+                        fontFamily = montserratFamily,
+                        textAlign = TextAlign.Center
                     )
                 }
             }

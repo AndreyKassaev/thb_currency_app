@@ -17,6 +17,7 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.sp
 import ru.thbank.thb_currency_app.R
 import ru.thbank.thb_currency_app.domain.MainState
@@ -67,7 +68,8 @@ class TopAppBar(val viewModel: MainViewModel) {
                     color = Color.White,
                     fontSize = 34.sp,
                     fontWeight = FontWeight.Bold,
-                    fontFamily = montserratFamily
+                    fontFamily = montserratFamily,
+                    textAlign = TextAlign.Center
                 )
             }
             Box(
